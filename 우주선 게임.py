@@ -42,7 +42,7 @@ def crash(a, b):
     else : 
         return False
 ss = obj()
-ss.put_img("Asset/images-n.png")
+ss.put_img("images-n.png")
 ss.change_size(50,80)
 ss.x = round(size[0]/2- ss.sx/2)
 ss.y = size[1] -ss.sy - 15
@@ -73,7 +73,7 @@ while SB == 0:
             if event.key == pygame.K_SPACE:
                 SB = 1
     screen.fill(black)
-    font = pygame.font.Font("Asset/COOPBL.TTF", 15)
+    font = pygame.font.Font("COOPBL.TTF", 15)
     text = font.render("PRESS SPACE KEY TO START THE GAME", True, (255,255,255))
     screen.blit(text, (140, round(size[1]/2-50)))    
     pygame.display.flip()
@@ -139,7 +139,7 @@ while SB == 0:
     
     if space_go == True and k % 6 == 0:
         mm = obj()
-        mm.put_img("Asset/images.png")
+        mm.put_img("images.png")
         mm.change_size(5,15)
         mm.x = round(ss.x + ss.sx/2 - mm.sx/2)
         mm.y = ss.y - mm.sy - 10
@@ -158,7 +158,7 @@ while SB == 0:
         
     if random.random() > 0.98: 
         aa = obj()
-        aa.put_img("Asset/images-s.png")
+        aa.put_img("images-s.png")
         aa.change_size(40,40)
         aa.x = random.randrange(0, size[0]-aa.sx-round(ss.sx/2))
         aa.y = 10
@@ -211,7 +211,7 @@ while SB == 0:
     for a in a_list:
         a.show()
         
-    font = pygame.font.Font("Asset/COOPBL.TTF", 20)
+    font = pygame.font.Font("COOPBL.TTF", 20)
     text_kill = font.render("killed : {} loss : {}".format(kill, loss), True, (255,255,0))
     screen.blit(text_kill, (10, 5))
     
@@ -227,7 +227,7 @@ while GO == 1:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             GO = 0
-    font = pygame.font.Font("Asset/COOPBL.TTF", 40)
+    font = pygame.font.Font("COOPBL.TTF", 40)
     text = font.render("GAME OVER", True, (255,0,0))
     screen.blit(text, (140, round(size[1]/2-50)))
     pygame.display.flip()
